@@ -70,9 +70,6 @@ Laisha is also the hardest working person in the room.`
 
 What happens here is that we create a `global` variable `theHustler` and assign Laisha to it, then inside the shoutOut function we declare the same variable but assign it a different value `Paul` the difference between the two is that `Paul` can only be used inside the function, so it changed the value of `theHustler` just inside the function it does not interfere with the `console.log()` outside the function.
 ### Question 4
-In a few paragraphs, give a brief lesson on the topic of **rest parameters** (look them up if you're not familiar!)
-
-In your lesson, be sure to cover the following:
 
 * What is the purpose of "rest parameters"?  
 * How do we turn a parameter into a rest parameter and use them in functions? 
@@ -97,8 +94,37 @@ const sum = (...nums) => {
 }
 ``` 
 ### Question 5
+Imagine you are teaching a brand new programmer a brief lesson about **scope**. Your lesson should have the following components:
 
+* A definition of scope.
+* An analogy ("You can think of scope like ...")  
+* A short code snippet that demonstrates scope (make sure to wrap it in triple backticks)  
+* An explanation of your example  
 
+For each section, use clear and concise language. Double check spelling and grammar.
+
+The **scope** is the current context of execution in which `values` and expressions are "visible" or can be referenced. If a `variable` or expression is not in the current scope, it will not be available for use. Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.
+
+JavaScript has the following kinds of scopes:
+
+* Global scope: The default scope for all code running in script mode.
+* Module scope: The scope for code running in module mode.
+* Function scope: The scope created with a function.
+
+A `function` creates a scope, so that a variable defined exclusively within the function cannot be accessed from outside the function or within other functions.
+
+You can think of **scope** like a backpack If there is a pencil `inside` a backpack that is not yours you cannot use it but if the pencil is `outside` anyone can use the pencil.
+```javascript
+const globalVariable = 'Julian';
+
+const shoutOut = () => {
+  const privateVariable = 'Alejandro';
+  console.log(`${privateVariable} this variable is only accessible for the elements in the function.`);
+}
+
+shoutOut();
+console.log(`${globalVariable} this variable is accessible by every element in the code. Including the function.`);
+``` 
 ### Question 6
 
 
