@@ -33,10 +33,12 @@ const fixVariables = (temp) => {
 // It should NOT mutate the original array
 
 const doubleAllItemsPurely = (arr) => {
+  const newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i] * 2;
+    const result = arr[i] * 2;
+    newArr.push(result);
   }
-  return arr;
+  return newArr;
 };
 
 // ============================================
