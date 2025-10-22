@@ -183,6 +183,37 @@ results();
 ```
 ### Question 7
 
+Consider the function `removeLastPurely`. It is a **pure function**.
+
+```javascript
+const removeLastPurely = (arr) => {
+  const arrCopy = [...arr];
+  arrCopy.pop();
+  return arrCopy;
+}
+
+const fruits = ['apple', 'banana', 'cherry', 'date'];
+const fruitsMinusOne = removeLastPurely(fruits);
+```
+
+After this code runs, explain what values will be held by `fruits` and `fruitMinusOne`.
+
+Then, explain why it is necessary to make a copy of the array in order to make it a pure function. 
+
+Finally, explain why we would want to avoid mutating the input array itself (why would we want the function to be pure?).
+
+#### Pure Function
+
+**Values held by fruits:**
+[ 'apple', 'banana', 'cherry', 'date' ]
+
+**Values held by fruitMinusOne:**
+[ 'apple', 'banana', 'cherry' ]
+
+It is neccessary to make a copy of the array to make a **pure function** because that way it does not mutate the array pure functions don't change the values it assigns it to a new array, contrary to impure functions which gives you the array back but the contents are not the same.
+#### **Why would we want the function to be pure?**
+
+If you still want to work with the same array, like students grades you want to keep the contents the same and just adjust some minor details, if you change it completely you might forget what were you comparing.
 
 ### Question 8
 
