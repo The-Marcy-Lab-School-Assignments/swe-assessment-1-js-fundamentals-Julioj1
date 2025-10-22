@@ -217,3 +217,41 @@ If you still want to work with the same array, like students grades you want to 
 
 ### Question 8
 
+You are a developer on an e-commerce website (like Amazon.com). Your job is to write code that lets users add items to a shopping cart, adjust the quantities of each item, and see a total of all items.
+
+Answer the following questions:
+
+**What data type(s) would you use to represent a single item in the cart? Why?**
+
+I would represent an item in the cart with an object, numbers, strings. Because an item is an object with different `properties`, they have a name which is a `string`, and they always have item series `numbers`.
+
+**What data type(s) would you use to represent the entire shopping cart that holds those items? Why?** 
+
+I would represent them the same as with the items but in this case with an array as well, I see it as an array of objects that have name, series number, color and every item represents a diferent object in the array with their respective properties.
+
+**Provide a hard-coded example of a `shoppingCart` with multiple items to support your explanation.**
+```javascript
+const shoopingCart = [
+      {
+        name: 'Bag',
+        serialNumber: 589435,
+        color: 'Pink',
+        size: 'Medium',
+        itemNumber: 1,
+      },
+      {
+        name: 'Hat',
+        serialnumber: 784913,
+        color: 'Black',
+        size: 'Small',
+        itemNumber: 2,
+      },
+      {
+        name: 'Hoodie',
+        serialnumber: 967203,
+        color: 'Blue',
+        size: 'Extra Large',
+        itemNumber: 1,
+      },
+    ];
+```
