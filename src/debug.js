@@ -45,12 +45,12 @@ const doubleAllItemsPurely = (arr) => {
 // This function should take in an array of numbers and return the sum of all the numbers
 
 const sumArray = (nums) => {
-  let sum = 0;
-  for (let i = 1; i < nums; i++) {
-    sum += nums[i];
+  let total = 0;
+  for (let i = [0]; i < nums.length; i++) {
+    total += nums[i];
   }
-  return sum;
-};
+  return total;
+}
 
 // ============================================
 // Exports
