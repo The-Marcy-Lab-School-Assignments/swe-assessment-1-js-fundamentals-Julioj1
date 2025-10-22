@@ -49,6 +49,9 @@ const loopFromOneUpToAnother = (firstNum, secondNum) => {
 
 const shoutEveryLetterForLoop = (str) => {
   // Your code here
+  for (let i = 0; i < str.length; i++) {
+    console.log(`${str[i].toUpperCase()}!`)
+  }
 };
 
 // ============================================
