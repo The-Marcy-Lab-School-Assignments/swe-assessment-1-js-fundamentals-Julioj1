@@ -1,7 +1,7 @@
 {
   "testScores": {
     "Debug Tests": {
-      "DeTe1": 0,
+      "DeTe1": 1,
       "DeTe2": 1,
       "DeTe3": 1
     },
@@ -46,8 +46,8 @@
     "From Scratch Tests From Scratch 5: getNamesOfGreedyGnomes - returns only the names of the gnomes": "FrScTe9"
   },
   "humanReadable": {
-    "Debug Tests": "2/3",
-    "finalTestScore": "FINAL SCORE: 7/12",
+    "Debug Tests": "3/3",
+    "finalTestScore": "FINAL SCORE: 8/12",
     "From Scratch Tests": "5/9"
   }
 }
