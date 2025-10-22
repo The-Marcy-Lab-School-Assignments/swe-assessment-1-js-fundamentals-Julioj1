@@ -61,12 +61,18 @@ const shoutEveryLetterForLoop = (str) => {
 
 const letterCaseCounts = (str) => {
   // Your code here
-  const letterCase = {};
+  const letterCase = { lowercase: 0, uppercase: 0, neither: 0 };
   for (let i = 0; i < str.length; i++) {
-    if (str[i] != "") {
-
+    let char = str[i];
+    if (char >= 'a' && char <= 'z') {
+      letterCase.lowercase++;
+    } else if (char >= 'A' && char <= 'Z') {
+      letterCase.uppercase++;
+    } else {
+      letterCase.neither++;
     }
   }
+  return letterCase;
 };
 
 // ============================================
