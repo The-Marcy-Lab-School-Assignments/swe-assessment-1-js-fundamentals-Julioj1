@@ -15,6 +15,21 @@
 
 const petJudger = (petBreed, petName) => {
   // Your code here
+  if (typeof petName || petBreed === "number") {
+    console.log(`Missing information. Please provide a valid pet.`);
+  } else if (petBreed || petName != "") {
+    console.log(`Missing information. Please provide a valid pet.`);
+  } else if (petBreed === "dog") {
+    console.log(`I love dogs! ${petName} is so cute!`);
+  } else if (petBreed === "cat") {
+    console.log(`I love cats! ${petName} is so cute!`);
+  } else if (petBreed === "turtle") {
+    console.log(`Who doesn't love a good turtle? ${petName} is the tops.`);
+  } else if (petBreed === "snake") {
+    console.log(`Not a fan, please take ${petName} and leave.`);
+  } else {
+    console.log(`What an...interesting pet.`)
+  }
 };
 
 // ============================================
