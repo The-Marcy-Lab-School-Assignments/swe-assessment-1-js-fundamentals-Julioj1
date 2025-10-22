@@ -52,11 +52,50 @@ This code logs: `"Michael Jordan"`.
 Let me guide you step by step - First we create an `object` called **`bestPlayer`** with the property `name` and value `Lebron James`. Then we create a variable `theGOAT` and assign **`bestPlayer`** to it after that we change the property `name` in **`bestPlayer`** using dot notation to `"Michael Jordan"` so when we log `theGOAT.name` it will log the changed property `name` that is now `"Michael Jordan"`.
 
 ### Question 3
+What does the following code log? Explain why.
 
+```javascript
+const theHustler = 'Laisha';
 
+const shoutOut = () => {
+  const theHustler = 'Paul';
+  console.log(`${theHustler} is the hardest working person in the room.`);
+}
+
+shoutOut();
+console.log(`${theHustler} is also the hardest working person in the room.`);
+```
+It will log: `Paul is the hardest working person in the room.
+Laisha is also the hardest working person in the room.`
+
+What happens here is that we create a `global` variable `theHustler` and assign Laisha to it, then inside the shoutOut function we declare the same variable but assign it a different value `Paul` the difference between the two is that `Paul` can only be used inside the function, so it changed the value of `theHustler` just inside the function it does not interfere with the `console.log()` outside the function.
 ### Question 4
+In a few paragraphs, give a brief lesson on the topic of **rest parameters** (look them up if you're not familiar!)
 
+In your lesson, be sure to cover the following:
 
+* What is the purpose of "rest parameters"?  
+* How do we turn a parameter into a rest parameter and use them in functions? 
+* Illustrate the use of rest parameters by writing a function called `sum` that takes *any* number of integers as arguments and returns their sum.
+
+```javascript
+sum(1, 2, 10); // 13
+sum(5); // 5
+sum(100, 200, 800, 1, 1, 1); // 1103;
+``` 
+The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
+* A function definition can only have one rest parameter.
+* The rest parameter must be the last parameter in the function definition.
+
+```javascript
+const sum = (...nums) => {
+    let total = 0;
+    for (const num of nums){
+        total += num;
+    }
+    return total;
+}
+``` 
 ### Question 5
 
 
