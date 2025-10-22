@@ -14,11 +14,13 @@
 // ============================================
 
 const petJudger = (petBreed, petName) => {
-  // Your code here
-  if (typeof petName || petBreed === "number") {
-    console.log(`Missing information. Please provide a valid pet.`);
-  } else if (petBreed || petName != "") {
-    console.log(`Missing information. Please provide a valid pet.`);
+  if (
+    !petBreed ||
+    !petName ||
+    typeof petBreed !== "string" ||
+    typeof petName !== "string"
+  ) {
+    console.log("Missing information. Please provide a valid pet.");
   } else if (petBreed === "dog") {
     console.log(`I love dogs! ${petName} is so cute!`);
   } else if (petBreed === "cat") {
@@ -28,10 +30,9 @@ const petJudger = (petBreed, petName) => {
   } else if (petBreed === "snake") {
     console.log(`Not a fan, please take ${petName} and leave.`);
   } else {
-    console.log(`What an...interesting pet.`)
+    console.log(`What an...interesting pet.`);
   }
 };
-
 // ============================================
 // Question 2: loopFromOneUpToAnother
 // ============================================
@@ -74,6 +75,13 @@ const letterCaseCounts = (str) => {
 
 const getNamesOfGreedyGnomes = (gnomes) => {
   // Your code here
+  const newArr = [];
+  for (let i = 0; i < gnomes.length; i++) {
+    if (gnomes[i].stolenDecorations.length > 1) {
+      newArr.push(gnomes[i].name)
+    }
+  }
+  return newArr
 };
 
 // ============================================
