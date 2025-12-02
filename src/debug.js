@@ -13,13 +13,13 @@
 
 const fixVariables = (temp) => {
   if (temp < 30) {
-    const msg = 'Pretty chilly.';
+    msg = 'Pretty chilly.';
   } else if (temp < 70) {
-    const msg = 'Not bad.';
+    msg = 'Not bad.';
   } else if (temp < 100) {
-    const msg = 'On the hot side.';
+    msg = 'On the hot side.';
   } else {
-    const msg = 'I will die of heat.';
+    msg = 'I will die of heat.';
   }
   console.log(msg);
   console.log("And that's how I feel about the temp!");
@@ -33,10 +33,12 @@ const fixVariables = (temp) => {
 // It should NOT mutate the original array
 
 const doubleAllItemsPurely = (arr) => {
+  const newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i] * 2;
+    const result = arr[i] * 2;
+    newArr.push(result);
   }
-  return arr;
+  return newArr;
 };
 
 // ============================================
@@ -45,12 +47,12 @@ const doubleAllItemsPurely = (arr) => {
 // This function should take in an array of numbers and return the sum of all the numbers
 
 const sumArray = (nums) => {
-  let sum = 0;
-  for (let i = 1; i < nums; i++) {
-    sum += nums[i];
+  let total = 0;
+  for (let i = [0]; i < nums.length; i++) {
+    total += nums[i];
   }
-  return sum;
-};
+  return total;
+}
 
 // ============================================
 // Exports
